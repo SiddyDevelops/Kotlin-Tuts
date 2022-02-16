@@ -65,12 +65,33 @@ fun main(args: Array<String>) {
 //    println(message)
 
     val sid = Player("Siddy",3)
-//    println(sid.name)
-//    println(sid.lives)
-//    println(sid.level)
-//    println(sid.score)
-    sid.show()
+    //sid.show()
     val l = Player("Lomie",2)
     l.score = 12
+    //l.show()
+//    println(l.weapon.name.toUpperCase())
+//    println(l.weapon.damageInflected)
+
+    val axe = Weapon("Axe",12)
+    l.weapon = axe
+    //println(axe.name)
+
+    axe.damageInflected = 20
+//    println(axe.damageInflected)
+//    println(l.weapon.damageInflected)
+
+    sid.weapon = Weapon("sword",15)
+    //println(sid.weapon.name)
+    l.weapon = sid.weapon
     l.show()
+
+    sid.weapon = Weapon("Spear",20)
+    //println(sid.weapon.name)
+    sid.show()
+
+    val redPotion = Loot("RedPotion", lootType.POTION, 7.50)
+    sid.inventory.add(redPotion)
+    sid.showInventory()
+    println(sid)
+
 }

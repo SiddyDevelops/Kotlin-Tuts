@@ -1,7 +1,7 @@
 import android.os.Build
 import androidx.annotation.RequiresApi
 
-class Player(val name:String, var lives: Int, var level: Int = 1, var score: Int = 0) {
+class Player(val name:String, var lives: Int = 3, var level: Int = 1, var score: Int = 0) {
     var weapon: Weapon = Weapon("Fist",1)
     private val inventory = ArrayList<Loot>()
 
@@ -43,16 +43,28 @@ class Player(val name:String, var lives: Int, var level: Int = 1, var score: Int
     fun dropLoot(name: String): Boolean
     {
         println("$name will be dropped.")
-        return inventory.removeIf{it.name == name}
+        //return inventory.removeIf{it.name == name}
+        for(item in inventory)
+        {
+            if(name == item.name) {
+               inventory.remove(item)
+               return true
+            }
+        }
+        return false
     }
 
     fun showInventory()
     {
+        var total = 0.00
         println("$name's Inventory: ")
         for(item in inventory){
             println(item)
+            total += item.value
         }
-        println("=========================")
+        println("========================================")
+        println("Total Score is: $total")
+        println("========================================")
     }
 
 }

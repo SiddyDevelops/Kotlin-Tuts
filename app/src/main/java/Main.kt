@@ -124,17 +124,53 @@ fun main(args: Array<String>) {
 //
 ////    println(sid)
 
- val enemy = Enemy("Baba Yaga", 100, 3)
-    println(enemy)
-//    enemy.takeDamage(40)
-//    println(enemy)
-//
-//    enemy.takeDamage(111)
-//    println(enemy)
 
-    val uglyTroll = Troll("Ugly Troll")
-    println(uglyTroll)
-    uglyTroll.takeDamage(30)
-    println(uglyTroll)
+//    val uglyTroll = Troll("Ugly Troll")
+//    println(uglyTroll)
+//    uglyTroll.takeDamage(30)
+//    println(uglyTroll)
+//
+//   val vam = Vampire("Vlad")
+//   println(vam)
+//   vam.takeDamage(8)
+//   println(vam)
+//
+//    for (i in 1..10) {
+//        val dracula = VampireKing("Dracula")
+//        println(dracula)
+//        while (dracula.lives > 0) {
+//            if (dracula.dodges()) {
+//                continue
+//            }
+//            if (dracula.runAway()) {
+//                println("Dracula Ran Away!")
+//                break
+//            } else {
+//                dracula.takeDamage(80)
+//            }
+//        }
+//        println("-----------------------------------------")
+//    }
+
+    val conan = Player("Conan")
+    conan.getLoot(Loot("Invisibility",lootType.POTION,4.0))
+    conan.getLoot(Loot("Mithril",lootType.ARMOR,183.0))
+    conan.getLoot(Loot("Ring of speed",lootType.RING,25.0))
+    conan.getLoot(Loot("Red potion",lootType.POTION,2.0))
+    conan.getLoot(Loot("Cursed Shield",lootType.ARMOR,-8.0))
+    conan.getLoot(Loot("Brass Ring",lootType.RING,1.0))
+    conan.getLoot(Loot("Chain mail",lootType.ARMOR,4.0))
+    conan.getLoot(Loot("Gold Ring",lootType.RING,12.0))
+    conan.getLoot(Loot("Gold Ring",lootType.RING,12.0))
+    conan.getLoot(Loot("Gold Ring",lootType.RING,12.0))
+    conan.getLoot(Loot("Health potion",lootType.POTION,3.0))
+    conan.getLoot(Loot("Silver Ring",lootType.RING,6.0))
+    conan.getLoot(Loot("Silver Ring",lootType.RING,6.0))
+
+    conan.dropLoot("Gold Ring")
+    conan.dropLoot("Gold Ring")
+    conan.dropLoot("Silver Ring")
+    conan.showInventory()
+
 
 }

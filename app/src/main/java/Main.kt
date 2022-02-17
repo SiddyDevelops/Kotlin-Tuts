@@ -1,97 +1,140 @@
+import android.os.Build
+import androidx.annotation.RequiresApi
+
 // This the Main function
+@RequiresApi(Build.VERSION_CODES.N)
 fun main(args: Array<String>) {
 
-//    println("This is my first kotlin code.")
-//    println("I am Siddharth Singh")
+//////    println("This is my first kotlin code.")
+//////    println("I am Siddharth Singh")
+//////
+//////    val siddy: String = "Siddharth Singh"
+//////    println(siddy)
+//////    // Difference between Val and Var -->
+//////    //          val is immutable whereas var can be modified (val is static)
+//////
+//////    println()
+//////    val x: Int = 16
+//////    val y: Double = 18.0
+//////    var z: Double =  x* y
+//////    println(z)
+//////
+//////    z = y/x
+//////    println(z)
+//////
+//////    println()
+//////    // Inline variable interpolation
+//////    println("My name is: $siddy, I am $y years old.")
+//////    println("18 divided by 2 is: ${y/2}")
+//////
+//////    println()
+//////    val new = "I am new line. Redundant declaration."
+//////    println(new)
+////
+////    // Conditional Statements
+//////    val lives = 3
+//////    val isGameOver = (lives < 1)             // Store state in value
+//////    if(isGameOver) {
+//////        println("GAME OVER")
+//////    } else {
+//////        println("Continue Game")
+//////    }
+////
+//////    println("How old are you? ")
+//////    val age = readLine()!!.toInt()
+//////    println("You age is $age.")
+//////    val message: String = if(age < 18){
+//////        "You are too old to drive."
+//////    } else if(age > 100) {
+//////        "You are too old to live."
+//////    } else {
+//////        "Congratulations! You can drive and vote."
+//////    }
+//////    println(message)
+////
+//////    println("How old are you? ")
+//////    val age = readLine()!!.toInt()
+//////    println("You age is $age.")
+//////    val message: String = when {
+//////        age < 18 -> {
+//////            "You are too old to drive."
+//////        }
+//////        age > 100 -> {
+//////            "You are too old to live."
+//////        }
+//////        else -> {
+//////            "Congratulations! You can drive and vote."
+//////        }
+//////    }
+//////    println(message)
 //
-//    val siddy: String = "Siddharth Singh"
-//    println(siddy)
-//    // Difference between Val and Var -->
-//    //          val is immutable whereas var can be modified (val is static)
+//    val sid = Player("Siddy",3)
+//    //sid.show()
+//    val l = Player("Lomie",2)
+//    l.score = 12
+//    //l.show()
+////    println(l.weapon.name.toUpperCase())
+////    println(l.weapon.damageInflected)
 //
-//    println()
-//    val x: Int = 16
-//    val y: Double = 18.0
-//    var z: Double =  x* y
-//    println(z)
+//    val axe = Weapon("Axe",12)
+//    l.weapon = axe
+//    //println(axe.name)
 //
-//    z = y/x
-//    println(z)
+//    axe.damageInflected = 20
+////    println(axe.damageInflected)
+////    println(l.weapon.damageInflected)
 //
-//    println()
-//    // Inline variable interpolation
-//    println("My name is: $siddy, I am $y years old.")
-//    println("18 divided by 2 is: ${y/2}")
+//    sid.weapon = Weapon("sword",15)
+//    //println(sid.weapon.name)
+//    l.weapon = sid.weapon
+//    l.show()
 //
-//    println()
-//    val new = "I am new line. Redundant declaration."
-//    println(new)
-
-    // Conditional Statements
-//    val lives = 3
-//    val isGameOver = (lives < 1)             // Store state in value
-//    if(isGameOver) {
-//        println("GAME OVER")
+//    sid.weapon = Weapon("Spear",20)
+//    //println(sid.weapon.name)
+//    sid.show()
+//
+//    val redPotion = Loot("RedPotion", lootType.POTION, 7.50)
+//    sid.getLoot(redPotion)
+//    val chestArmor = Loot("+3 Chest Armor", lootType.ARMOR, 80.00)
+//    sid.getLoot(chestArmor)
+//    sid.showInventory()
+//
+//    sid.getLoot(Loot("Rings of protection +2", lootType.RING,40.25))
+//    sid.getLoot(Loot("Invisiblity potion", lootType.POTION,25.30))
+//    sid.showInventory()
+//
+//    if(sid.dropLoot(redPotion)){
+//        sid.showInventory()
 //    } else {
-//        println("Continue Game")
+//        println("You don't have a ${redPotion.name}")
 //    }
-
-//    println("How old are you? ")
-//    val age = readLine()!!.toInt()
-//    println("You age is $age.")
-//    val message: String = if(age < 18){
-//        "You are too old to drive."
-//    } else if(age > 100) {
-//        "You are too old to live."
+//
+//    val bluePotion  = Loot("Blue potion", lootType.POTION, 6.00)
+//    if(sid.dropLoot(bluePotion)){
+//        sid.showInventory()
 //    } else {
-//        "Congratulations! You can drive and vote."
+//        println("You don't have a ${bluePotion.name}")
 //    }
-//    println(message)
-
-//    println("How old are you? ")
-//    val age = readLine()!!.toInt()
-//    println("You age is $age.")
-//    val message: String = when {
-//        age < 18 -> {
-//            "You are too old to drive."
-//        }
-//        age > 100 -> {
-//            "You are too old to live."
-//        }
-//        else -> {
-//            "Congratulations! You can drive and vote."
-//        }
+//
+//    if(sid.dropLoot("Invisiblity potion")){
+//        sid.showInventory()
+//    } else {
+//        println("You don't have a \"Invisiblity potion\"")
 //    }
-//    println(message)
+//
+////    println(sid)
 
-    val sid = Player("Siddy",3)
-    //sid.show()
-    val l = Player("Lomie",2)
-    l.score = 12
-    //l.show()
-//    println(l.weapon.name.toUpperCase())
-//    println(l.weapon.damageInflected)
+ val enemy = Enemy("Baba Yaga", 100, 3)
+    println(enemy)
+//    enemy.takeDamage(40)
+//    println(enemy)
+//
+//    enemy.takeDamage(111)
+//    println(enemy)
 
-    val axe = Weapon("Axe",12)
-    l.weapon = axe
-    //println(axe.name)
-
-    axe.damageInflected = 20
-//    println(axe.damageInflected)
-//    println(l.weapon.damageInflected)
-
-    sid.weapon = Weapon("sword",15)
-    //println(sid.weapon.name)
-    l.weapon = sid.weapon
-    l.show()
-
-    sid.weapon = Weapon("Spear",20)
-    //println(sid.weapon.name)
-    sid.show()
-
-    val redPotion = Loot("RedPotion", lootType.POTION, 7.50)
-    sid.inventory.add(redPotion)
-    sid.showInventory()
-    println(sid)
+    val uglyTroll = Troll("Ugly Troll")
+    println(uglyTroll)
+    uglyTroll.takeDamage(30)
+    println(uglyTroll)
 
 }
